@@ -9,8 +9,8 @@ from fastapi.staticfiles import StaticFiles
 
 app = FastAPI(title="Text Summarizer App", description="Text Summarization using T5", version="1.0")
 
-model = T5ForConditionalGeneration.from_pretrained("t5-small")
-tokenizer = T5Tokenizer.from_pretrained("t5-small")
+model = T5ForConditionalGeneration.from_pretrained("sshleifer/tiny-t5")
+tokenizer = T5Tokenizer.from_pretrained("sshleifer/tiny-t5")
 # device
 if torch.backends.mps.is_available():
     device = torch.device("mps")
